@@ -169,3 +169,7 @@ exec --no-startup-id /home/mkager/.fehbg
 
 # locking
 bindsym $mod+Shift+Delete exec --no-startup-id i3lock -c 000000
+
+bindsym $mod+Print exec --no-startup-id deepin-screenshot
+
+exec --no-startup-id xinput set-button-map 11 1 2 3 5 4 6 7
