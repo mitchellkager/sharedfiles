@@ -168,8 +168,12 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease
 exec --no-startup-id /home/mkager/.fehbg
 
 # locking
-bindsym $mod+Shift+Delete exec --no-startup-id i3lock -c 000000
+bindsym $mod+Shift+Delete exec --no-startup-id i3lock -c 000000 && systemctl suspend
 
+# screenshot
 bindsym $mod+Print exec --no-startup-id deepin-screenshot
 
-exec --no-startup-id xinput set-button-map 11 1 2 3 5 4 6 7
+# spotify play / pause
+bindsym $mod+p exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+exec --no-startup-id xinput set-button-map 11 1 2 3 5 4 7 6

@@ -1,0 +1,4 @@
+home/.bash_profile:~
+home/.bashrc:~
+home/.vimrc:~
+i3/config:~/.config/i3
