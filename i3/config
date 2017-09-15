@@ -169,6 +169,7 @@ exec --no-startup-id /home/mkager/.fehbg
 
 # locking
 bindsym $mod+Shift+Delete exec --no-startup-id i3lock -c 000000 && systemctl suspend
+bindsym $mod+Control+Shift+Delete exec --no-startup-id i3lock -c 000000
 
 # screenshot
 bindsym $mod+Print exec --no-startup-id deepin-screenshot
