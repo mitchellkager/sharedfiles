@@ -1,4 +1,5 @@
 filetype plugin on
+filetype indent on
 
 "------ Visual Options ------
 syntax on
