@@ -1,6 +1,10 @@
 filetype plugin on
 filetype indent on
 
+"----- Change vertical navigation to be graphical
+nnoremap j gj
+nnoremap k gk
+
 "------ Visual Options ------
 syntax on
 set colorcolumn=80
