@@ -162,6 +162,11 @@ bar {
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle #increase volume
+bindsym $mod+M exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioPlay exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym XF86AudioNext exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+bindsym XF86AudioPrev exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym XF86AudioStop exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
 
 # backlight
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase brightness
@@ -181,7 +186,5 @@ bindsym $mod+N exec --no-startup-id nextwall
 bindsym $mod+Print exec --no-startup-id deepin-screenshot -f
 bindsym $mod+Shift+Print exec --no-startup-id deepin-screenshot
 
-# spotify play / pause
-bindsym $mod+p exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 exec --no-startup-id xinput set-button-map 11 1 2 3 5 4 7 6
