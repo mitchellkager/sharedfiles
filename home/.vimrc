@@ -20,5 +20,6 @@ set autoindent
 set tabstop=8 sts=0 expandtab shiftwidth=4 smarttab
 set splitbelow
 set splitright
+set noeol
 
 set omnifunc=syntaxcomplete#Complete
