@@ -1,5 +1,5 @@
 home/.bash_profile:~/.bash_profile
-home/.bashrc:!/.bashrc
+home/.bashrc:~/.bashrc
 home/.vimrc:~/.vimrc
 i3/config:~/.config/i3/config
 bin/lockscript.sh:~/bin/lockscript.sh
